@@ -10,8 +10,13 @@ import rootSaga from './sagas/index';
 
 import * as serviceWorker from './serviceWorker';
 
+// Saga ミドルウェアを作成する
 const sagaMiddleware = createSagaMiddleware();
+
+// Saga を Store にマウントする。
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+
+// Saga を起動する。
 sagaMiddleware.run(rootSaga);
 
 store.subscribe(() => console.log("store", store.getState())
