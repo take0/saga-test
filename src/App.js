@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { getScoresRequest } from './actions';
+import ScoreList from './presentations/ScoreList';
 
 class App extends Component {
     render() {
@@ -9,6 +10,7 @@ class App extends Component {
                 <div>
                     <button onClick={this.props.getScoresRequest}>list scores</button>
                 </div>
+                <ScoreList />
             </React.Fragment>
        );
     }
