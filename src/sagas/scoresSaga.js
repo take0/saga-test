@@ -6,8 +6,9 @@ import { scores } from '../actions';
 
 function* handleRequest(action) {
     console.log("[saga] action.type is : " + action.type);
-    const { payload, error} = yield call(api);
-    console.log("[saga] payload : " + payload);
+    const payload = yield call(api);
+    console.log("[saga] payload.id : " + payload.id);
+    console.log("[saga] payload.score : " + payload.score);
 }
 
 // 'SCORES'アクションが呼ばれるごとに、handleRequestを実行。
