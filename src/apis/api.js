@@ -4,6 +4,7 @@ function api(data) {
         mode: "cors" // 異なる origin の API を呼ぶために必要。
     })
         .then(res => (res.json()))
+        .then(payload => ( { payload } ))
         .catch(error => ( { error } ));
 }
 
