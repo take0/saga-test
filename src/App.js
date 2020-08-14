@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { getScoresRequest } from './actions';
-import ScoreList from './presentations/ScoreList';
+//import ScoreList from './presentations/ScoreList';
+import ScoreList from './containers/ScoreListContainer'; // これ超大事。上の行だけだとScoreListContainerの中身が解釈されない。
 
 class App extends Component {
     render() {
@@ -10,7 +11,7 @@ class App extends Component {
                 <div>
                     <button onClick={this.props.getScoresRequest}>list scores</button>
                 </div>
-                <ScoreList />
+                <ScoreList entries={this.props.scores.entries}/>
             </React.Fragment>
        );
     }

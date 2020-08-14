@@ -1,6 +1,6 @@
 // reducers/scores.js
 
-const initialState = {};
+const initialState = { entries : [] };
 
 export default function scores(state = initialState, action) {
     console.log("[reducer] action.type is : " + action.type);
@@ -12,7 +12,8 @@ export default function scores(state = initialState, action) {
         case 'GET_SCORES_SUCCESS':
             // TODO : API call 成功後の処理を行う
             console.log("[reduser] GET_SCORES_SUCCESS");
-            return state;
+            // ひとまずべた書き
+            return { entries : [{id: "77777", score: 777}]};
         case 'GET_SCORES_FAILURE':
             // TODO : API call 失敗時の処理を行う
             console.log("[reduser] GET_SCORES_FAILURE");

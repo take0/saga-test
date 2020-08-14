@@ -10,6 +10,7 @@ class ScoreList extends Component {
     }
 
     render() {
+        console.log("[ScoreList] render()");
         return (
             <React.Fragment>
                 <div>
@@ -19,10 +20,13 @@ class ScoreList extends Component {
                         {this.data.entries.map(entries => (
                             <li key={entries.id}>id={entries.id}, score={entries.score}</li>
                         ))}
+                        {this.props.entries.map(entries => (
+                            <li key={entries.id}>id={entries.id}, score={entries.score}</li>
+                        ))}
                     </ul>
                 </div>
             </React.Fragment>
-       );
+        );
     }
 }
 
