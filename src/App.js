@@ -14,10 +14,10 @@ class App extends Component {
     }
 }
 
-// reduxŠÇ—‰º‚Ìstate‚ğprops‚Åˆµ‚¦‚é‚æ‚¤‚É‚·‚é
+// reduxç®¡ç†ä¸‹ã®stateã‚’propsã§æ‰±ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹
 const mapStateToProps = state => state;
 
-// AcitonŠÖ”‚ğProps‚Åˆµ‚¦‚é‚æ‚¤‚É‚·‚é
+// Acitoné–¢æ•°ã‚’Propsã§æ‰±ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹
 const mapDispatchToProps = ({scores});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
