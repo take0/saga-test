@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { scores } from './actions';
+import { getScoresRequest } from './actions';
 
 class App extends Component {
     render() {
         return (
             <React.Fragment>
                 <div>
-                    <button onClick={this.props.scores}>list scores</button>
+                    <button onClick={this.props.getScoresRequest}>list scores</button>
                 </div>
             </React.Fragment>
        );
@@ -18,7 +18,7 @@ class App extends Component {
 const mapStateToProps = state => state;
 
 // Aciton関数をPropsで扱えるようにする
-const mapDispatchToProps = ({scores});
+const mapDispatchToProps = ({getScoresRequest});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
