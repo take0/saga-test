@@ -8,8 +8,9 @@ export const getScoresRequest = () => ({
     type : GET_SCORES_REQUEST
 });
 
-export const getScoresSuccess = () => ({
-    type : GET_SCORES_SUCCESS
+export const getScoresSuccess = (returnedScores) => ({
+    type : GET_SCORES_SUCCESS,
+    payload: returnedScores
 });
 
 export const getScoresFailure = () => ({

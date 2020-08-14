@@ -19,7 +19,7 @@ const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 // Saga を起動する。
 sagaMiddleware.run(rootSaga);
 
-store.subscribe(() => console.log("store", store.getState())
+store.subscribe(() => console.log("store(subscribed)", store.getState())
 );
 
 ReactDOM.render(

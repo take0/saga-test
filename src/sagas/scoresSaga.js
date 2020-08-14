@@ -9,9 +9,9 @@ function* handleRequest(action) {
     const {payload, error} = yield call(api);
 
     if (payload && !error) {
-        console.log("[saga] payload.id : " + payload.id);
-        console.log("[saga] payload.score : " + payload.score);
-        yield put(getScoresSuccess());
+        console.log("[saga] payload[0].id : " + payload[0].id);
+        console.log("[saga] payload[0].score : " + payload[0].score);
+        yield put(getScoresSuccess(payload));
     } else {
         yield put(getScoresFailure());
     }
