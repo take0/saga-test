@@ -11,7 +11,7 @@ class App extends Component {
                 <div>
                     <button onClick={this.props.getScoresRequest}>list scores</button>
                 </div>
-                <ScoreList entries={this.props.scores.entries}/>
+                <ScoreList　/>
             </React.Fragment>
        );
     }
