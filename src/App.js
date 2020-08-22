@@ -5,11 +5,17 @@ import { getScoresRequest } from './actions';
 import ScoreList from './containers/ScoreListContainer'; // これ超大事。上の行だけだとScoreListContainerの中身が解釈されない。
 
 class App extends Component {
+
+    state = {
+        limit: '0'
+    }
+
     render() {
         return (
             <React.Fragment>
                 <div>
-                    <button onClick={this.props.getScoresRequest}>list scores</button>
+                    <input type="text" onChange={elm => this.setState({ limit: elm.target.value })} />
+                    <button onClick={ () => this.props.getScoresRequest(this.state.limit)}>list scores</button>
                 </div>
                 <ScoreList　/>
             </React.Fragment>

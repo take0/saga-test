@@ -5,8 +5,8 @@ import api from '../apis/api';
 import { getScoresSuccess, getScoresFailure } from '../actions';
 
 function* handleRequest(action) {
-    console.log("[saga] action.type is : " + action.type);
-    const {payload, error} = yield call(api);
+    console.log("[saga] action.type is : " + action.type + ", action.limit is : " + action.limit);
+    const {payload, error} = yield call(api, action.limit);
 
     if (payload && !error) {
         console.log("[saga] payload[0].id : " + payload[0].id);
